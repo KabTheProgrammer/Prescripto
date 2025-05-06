@@ -17,7 +17,7 @@ const port = process.env.PORT || 4000
 app.use(express.json())
 const allowedOrigins = [
   'https://prescripto-frontend-6v4zcl59j-kabirus-projects-4ce204e8.vercel.app',
-  "https://prescripto-admin-five.vercel.app/"
+  "https://prescripto-admin-five.vercel.app"
 ];
 
 app.use(cors({
