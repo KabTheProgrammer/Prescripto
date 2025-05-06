@@ -15,7 +15,16 @@ const port = process.env.PORT || 4000
 
 // Middlewares
 app.use(express.json())
-app.use(cors({ origin: "*", credentials: true }));
+const allowedOrigins = [
+  'https://prescripto-frontend-6v4zcl59j-kabirus-projects-4ce204e8.vercel.app',
+  "https://prescripto-admin-five.vercel.app/"
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true
+}));
+
 connectDB()
 connectCloudinary()
 
